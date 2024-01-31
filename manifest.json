@@ -1,0 +1,37 @@
+{
+   "author": "NguyenLinh-UET",
+   "content_scripts": [ {
+		"js": [ "js/autorun.js" ],
+		"matches": [
+					"*://dangkyhoc.vnu.edu.vn/*",
+					"*://dangkyhoc.mta.edu.vn/*"
+		],
+        "run_at": "document_idle"
+	}],
+   "background": {
+      "scripts": ["js/background.js"],
+      "persistent": false
+	},
+   "manifest_version": 2,
+   "name": "Tool đăng kí học VNU (DucLv) chỉnh sửa bởi NguyenLinh-UET",
+   "browser_action": {
+      "default_icon": "img/icon16.png",
+      "default_title": "Tool đăng kí học VNU (DucLv) chỉnh sửa bởi NguyenLinh-UET",
+      "default_popup": "html/popup.html"
+   },
+   "description": "Tool đăng kí học VNU - DucLv chỉnh sửa bởi NguyenLinh-UET",
+   "homepage_url": "https://www.facebook.com/nguyenlinh.uet",
+   "icons": {
+      "16": "img/icon16.png",
+      "48": "img/icon48.png",
+      "128": "img/icon128.png"
+   },
+   "permissions": [ "storage",
+   					"tabs", 
+   					"*://dangkyhoc.vnu.edu.vn/*"
+				],
+   "version": "1.0",
+   "web_accessible_resources": [ 
+		"js/content.js" 
+   ]
+}
